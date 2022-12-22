@@ -19,17 +19,17 @@ public class SearchExample {
 
      */
 
-@Test
+    @Test
     void SearchingOfExample() {
-    Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = true;
 
-    open("https://github.com/");
-    $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
-    $$("ul.repo-list li").first().$("a").click();
-    $("#wiki-tab").click();
-    $("#wiki-pages-box button").click();
-    $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
-    $("#wiki-pages-box").$(byText("SoftAssertions")).click();
-    $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
+        open("https://github.com/");
+        $("[data-test-selector=nav-search-input]").setValue("selenide").pressEnter();
+        $("ul.repo-list li").$("a").click();
+        $("#wiki-tab").click();
+        $("#wiki-pages-box button").click();
+        $("#wiki-pages-box").shouldHave(text("SoftAssertions"));
+        $("#wiki-pages-box").$(byText("SoftAssertions")).click();
+        $(".markdown-body").shouldHave(text("Using JUnit5 extend test class"));
     }
 }
