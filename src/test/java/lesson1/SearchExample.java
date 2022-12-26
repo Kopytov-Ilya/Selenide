@@ -1,3 +1,5 @@
+package lesson1;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +22,7 @@ public class SearchExample {
      */
 
     @Test
-    void SearchingOfExample() {
+    void searching_of_example() {
         Configuration.holdBrowserOpen = true;
 
         open("https://github.com/");

@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 public class GitHubEnterprize {
     @Test
-    void EnterprizeDisplayedSuccessfully() {
+    void enterprise_displayed_successfully() {
         //Открыть страницу GitHub;
         open("https://github.com/");
         //Выбрать в навигационном меню Solutions;
